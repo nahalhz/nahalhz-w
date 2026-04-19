@@ -1,65 +1,48 @@
-import Image from "next/image";
+"use client";
+
+import NetworkScene from "@/components/scene/NetworkScene";
 
 export default function Home() {
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <main className="relative w-screen h-screen overflow-hidden bg-base">
+      {/* Skip link for accessibility */}
+      <a
+        href="#content-skip"
+        className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-50 focus:bg-elevated focus:px-4 focus:py-2 focus:rounded-md focus:text-accent-cyan"
+      >
+        Skip 3D scene
+      </a>
+
+      <NetworkScene />
+
+      {/* Name lockup */}
+      <div className="absolute bottom-8 left-8 md:bottom-10 md:left-10 font-mono pointer-events-none z-10">
+        <div className="text-[36px] md:text-[48px] font-medium tracking-[-0.02em] text-fg-primary leading-none">
+          nahal.
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+        <div className="mt-2 text-[11px] uppercase tracking-[0.18em] text-fg-tertiary">
+          COMP NEURO × ML
         </div>
-      </main>
-    </div>
+      </div>
+
+      {/* Hint */}
+      <div
+        className="absolute top-4 left-4 md:top-5 md:left-5 font-mono text-[10px] tracking-[0.12em] text-fg-muted pointer-events-none z-10"
+        aria-hidden
+      >
+        DRAG · HOVER · CLICK
+      </div>
+
+      {/* Screen-reader fallback navigation */}
+      <nav id="content-skip" className="sr-only">
+        <ul>
+          <li><a href="/about">About</a></li>
+          <li><a href="/projects">Projects</a></li>
+          <li><a href="/writing">Writing</a></li>
+          <li><a href="/cv">CV</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+    </main>
   );
 }
