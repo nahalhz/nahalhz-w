@@ -1,36 +1,25 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# nahalhz.com — build guides
 
-## Getting Started
+Read in this order:
 
-First, run the development server:
+1. **`00-r3f-primer.md`** — How react-three-fiber thinks. Read this before you touch code. ~10 min read.
+2. **`01-weekend-checklist.md`** — Your step-by-step guide for this weekend's 3–4 hour session. Phases 1–4.
+3. **`02-design-system.md`** — Fonts, colors, spacing, motion. Reference doc, not a read-through.
+4. **`03-starter-code.md`** — Copy-pasteable code for the weekend and week 2.
+5. **`04-week-by-week-plan.md`** — What comes after the weekend. Week 2 through launch.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## TL;DR
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+**This weekend (3–4 hrs):** nahalhz.com live with orbitable 3D scene. Ugly but deployed.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+**Week 2:** particle cloud, labels, gradient. Looks ~80% of final.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+**Week 3:** bloom + camera zoom. The "wow" week.
 
-## Learn More
+**Week 4:** content pages with real text.
 
-To learn more about Next.js, take a look at the following resources:
+**Week 5+:** living content, one post every two weeks.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## The one rule
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Phase completion > phase perfection. A deployed ugly version beats a perfect localhost version, every time.
