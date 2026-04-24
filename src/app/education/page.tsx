@@ -11,6 +11,9 @@ export default function Page() {
           <p className="text-fg-secondary leading-relaxed">
             Building this page. Check back in a bit.
           </p>
+          <a href="/" className="inline-block mt-8 font-mono text-xs uppercase tracking-widest text-accent-light hover:text-accent-cyan transition-colors">
+            ← Back to network
+          </a>
         </div>
       </main>
     );
