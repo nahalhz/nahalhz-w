@@ -121,7 +121,7 @@ export default function ExperiencePage() {
 
         <h1 className="text-3xl md:text-4xl font-medium mb-4 text-fg-primary">Experience</h1>
         <p className="text-fg-secondary leading-relaxed mb-16 max-w-2xl">
-          Where I&apos;ve worked, what I&apos;ve built. Reverse-chronological. The bigger cards are deeper chapters; the smaller ones are moments along the way.
+          Where I&apos;ve worked, what I&apos;ve built. All in the past 3 years. 
         </p>
 
         <div className="grid grid-cols-1 md:grid-cols-[1fr_auto] gap-8 md:gap-12">
