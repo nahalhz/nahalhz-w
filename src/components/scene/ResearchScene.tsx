@@ -122,15 +122,9 @@ function Synapses() {
     <>
       {lines.map((line, i) => {
         const geo = new THREE.BufferGeometry().setFromPoints(line.points);
-        return (
-          <line key={i} geometry={geo}>
-            <lineBasicMaterial
-              color={line.color}
-              transparent
-              opacity={line.opacity}
-            />
-          </line>
-        );
+        const mat = new THREE.LineBasicMaterial({ color: line.color, transparent: true, opacity: line.opacity });
+        const lineObj = new THREE.Line(geo, mat);
+        return <primitive key={i} object={lineObj} />;
       })}
     </>
   );
