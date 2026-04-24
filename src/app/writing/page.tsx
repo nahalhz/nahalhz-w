@@ -19,6 +19,7 @@ type PostMeta = {
   date: string;
   type: "essay" | "note";
   tags: string[];
+  draft: boolean;
 };
 
 function getPosts(): PostMeta[] {
@@ -37,8 +38,10 @@ function getPosts(): PostMeta[] {
         date: data.date ?? "",
         type: data.type ?? "note",
         tags: data.tags ?? [],
+        draft: data.draft ?? false,
       };
     })
+    .filter((p) => !p.draft)
     .sort((a, b) => (a.date < b.date ? 1 : -1));
 }
 
