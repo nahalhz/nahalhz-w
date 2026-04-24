@@ -13,7 +13,7 @@ function ArrowLeftIcon({ size = 14 }: { size?: number }) {
   );
 }
 
-type Props = { params: { slug: string } };
+type Props = { params: Promise<{ slug: string }> };
 
 function getPost(slug: string) {
   const filePath = path.join(process.cwd(), "src/content/writing", `${slug}.mdx`);
@@ -32,8 +32,9 @@ export async function generateStaticParams() {
     .map((f) => ({ slug: f.replace(".mdx", "") }));
 }
 
-export default function PostPage({ params }: Props) {
-  const post = getPost(params.slug);
+export default async function PostPage({ params }: Props) {
+  const { slug } = await params;
+  const post = getPost(slug);
   if (!post) notFound();
 
   const { data, content } = post;
